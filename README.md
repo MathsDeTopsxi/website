@@ -1,2 +1,2 @@
-# website
-Le code source du site web des Maths de Topsxi
+Pour faciliter la navigation entre les différents thèmes et afin de garantir une meilleure expérience utilisateur, Topsxi entretient un site web statique pour présenter ces *masterpieces* mathématiques.\
+Le lien : *ahem*

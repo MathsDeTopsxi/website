@@ -1,0 +1,351 @@
+/* Color Palette */
+:root {
+    --tan: #D2B48C;
+    --cream: #FFFDD0;
+    --dark-tan: #8B7355;
+    --light-cream: #FFFFF0;
+    --text-dark: #3d3d3d;
+    --border-light: #E8D4C4;
+    --hover-accent: #C9A880;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background: linear-gradient(135deg, var(--light-cream) 0%, var(--cream) 100%);
+    min-height: 100vh;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, var(--tan) 0%, var(--hover-accent) 100%);
+    color: white;
+    padding: 3rem 1rem;
+    box-shadow: 0 4px 12px rgba(211, 180, 140, 0.25);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    opacity: 0.95;
+    font-weight: 300;
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+}
+
+/* Section Styles */
+.math-section {
+    margin-bottom: 4rem;
+    animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section-header {
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid var(--tan);
+}
+
+.section-header h2 {
+    font-size: 2rem;
+    color: var(--dark-tan);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.section-description {
+    font-size: 1.05rem;
+    color: var(--text-dark);
+    line-height: 1.8;
+    max-width: 900px;
+}
+
+/* PDF Container Grid */
+.pdf-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+/* PDF Card Styles */
+.pdf-card {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(139, 115, 85, 0.1);
+    transition: all 0.3s ease;
+    border-top: 4px solid var(--tan);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.pdf-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(211, 180, 140, 0.2);
+    border-top-color: var(--hover-accent);
+}
+
+.pdf-info {
+    flex-grow: 1;
+    margin-bottom: 1.5rem;
+}
+
+.pdf-info h3 {
+    font-size: 1.3rem;
+    color: var(--dark-tan);
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.pdf-description {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.7;
+}
+
+/* Labels Styles */
+.pdf-labels {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 1.5rem;
+    margin-top: auto;
+}
+
+.label {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--cream) 0%, var(--light-cream) 100%);
+    color: var(--dark-tan);
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid var(--tan);
+    transition: all 0.2s ease;
+}
+
+.label:hover {
+    background: linear-gradient(135deg, var(--tan) 0%, var(--hover-accent) 100%);
+    color: white;
+    border-color: var(--hover-accent);
+}
+
+.label-subtitle {
+    display: inline-block;
+    background: transparent;
+    color: var(--tan);
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid var(--tan);
+    transition: all 0.2s ease;
+}
+
+.label-subtitle:hover {
+    background: var(--tan);
+    color: white;
+}
+
+/* PDF Link Button Styles */
+.pdf-link {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--tan) 0%, var(--hover-accent) 100%);
+    color: white;
+    padding: 0.75rem 1.75rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(211, 180, 140, 0.2);
+}
+
+.pdf-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(211, 180, 140, 0.35);
+    background: linear-gradient(135deg, var(--hover-accent) 0%, var(--dark-tan) 100%);
+}
+
+.pdf-link:active {
+    transform: translateY(0);
+}
+
+.pdf-link span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+/* Section-level Labels (for Colored Space section) */
+.math-section > .pdf-labels {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, var(--cream) 0%, var(--light-cream) 100%);
+    border-radius: 8px;
+    border-left: 4px solid var(--tan);
+}
+
+/* Footer Styles */
+footer {
+    background: linear-gradient(135deg, var(--dark-tan) 0%, #6B5344 100%);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 4rem;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    main {
+        padding: 2rem 1rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.6rem;
+    }
+
+    .section-description {
+        font-size: 1rem;
+    }
+
+    .pdf-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .pdf-card {
+        padding: 1.5rem;
+    }
+
+    .pdf-info h3 {
+        font-size: 1.1rem;
+    }
+
+    .math-section {
+        margin-bottom: 3rem;
+    }
+
+    .section-header {
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 2rem 1rem;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    .subtitle {
+        font-size: 0.9rem;
+    }
+
+    main {
+        padding: 1.5rem 0.75rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.4rem;
+    }
+
+    .section-description {
+        font-size: 0.95rem;
+    }
+
+    .pdf-card {
+        padding: 1.25rem;
+    }
+
+    .pdf-info h3 {
+        font-size: 1rem;
+    }
+
+    .pdf-link {
+        padding: 0.65rem 1.25rem;
+        font-size: 0.9rem;
+    }
+
+    .label, .label-subtitle {
+        font-size: 0.8rem;
+        padding: 0.35rem 0.75rem;
+    }
+
+    .pdf-labels {
+        gap: 0.5rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    header {
+        background: var(--tan);
+    }
+
+    .pdf-link {
+        page-break-inside: avoid;
+    }
+
+    body {
+        background: white;
+    }
+}
